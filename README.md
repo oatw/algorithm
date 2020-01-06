@@ -20,7 +20,7 @@ $ git clone https://github.com/<your_github_username>/algorithm
 
 - [lib](https://github.com/oatw/algorithm/tree/master/lib): Implementations.
 
-- [spec](https://github.com/oatw/algorithm/tree/master/lib): Test specifications.
+- [spec](https://github.com/oatw/algorithm/tree/master/spec): Test specifications.
 
 ## Test
 
