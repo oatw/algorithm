@@ -28,7 +28,7 @@ Repec is used for testing, you could run `bundle exec rspec` to test your implem
 
 ## Contributing
 
-To get started, please read the [contribution guidelines](https://github.com/oatw/algorithms/blob/master/CONTRIBUTING.md).
+To get started, please read the [contribution guidelines](https://github.com/oatw/algorithm/blob/master/CONTRIBUTING.md).
 
 ## Copyright and License
 
