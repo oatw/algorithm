@@ -14,7 +14,7 @@ class BinaryTree
       data = tree_array.shift
       return nil unless data
       node = TreeNode.new data
-      node.left_child = create tree_array 
+      node.left_child = create tree_array
       node.right_child = create tree_array
       node
     end
@@ -40,15 +40,26 @@ class BinaryTree
       yield node.data
     end
 
-    def recursion_levelorder_traversal(node, **_options, &block)
+    def recursion_levelorder_traversal(node, &block)
       return unless node && block_given?
-      left_child = node.left_child
-      right_child = node.right_child
-      yield node.data unless _options[:skip_parent]
-      yield left_child.data if left_child
-      yield right_child.data if right_child
-      recursion_levelorder_traversal left_child, {skip_parent: true}, &block
-      recursion_levelorder_traversal right_child, {skip_parent: true}, &block
+      def recursion_height(node)
+        return 0 unless node
+        left_children_height = recursion_height(node.left_child)
+        right_children_height = recursion_height(node.right_child)
+        [left_children_height, right_children_height].max + 1
+      end
+      def level_traversal(node, level, &block)
+        return unless node
+        if level == 1
+          yield node.data
+        else
+          level_traversal(node.left_child, level - 1, &block)
+          level_traversal(node.right_child, level - 1, &block)
+        end
+      end
+      (1..recursion_height(node)).each do |level|
+        level_traversal(node, level, &block)
+      end
     end
 
     def stack_preorder_traversal(node, &block)
@@ -60,7 +71,12 @@ class BinaryTree
           stack << node
           node = node.left_child
         end
-        node = stack.pop.right_child unless stack.empty?
+        unless stack.empty?
+          node = stack.pop
+          node = node.right_child
+        end
+        # The same as above.
+        # node = stack.pop.right_child unless stack.empty?
       end
     end
 
@@ -94,7 +110,7 @@ class BinaryTree
           next if node && node != visited
           node = nil
           visited = stack.pop
-          yield visited.data 
+          yield visited.data
         end
       end
     end
