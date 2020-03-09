@@ -20,7 +20,7 @@ class BinaryHeap
     shifted
   end
 
-  # O(logn)
+  # T(n) = O(logn)
   def up_adjust(child_index, limit = 0)
     value = @data[child_index]
     while child_index > limit
@@ -32,11 +32,11 @@ class BinaryHeap
     @data[child_index] = value
   end
 
-  # O(logn)
+  # T(n) = O(logn)
   def down_adjust(parent_index, limit = @data.size)
     value = @data[parent_index]
     while (child_index = 2 * parent_index + 1) < limit
-      if child_index + 1 < limit && @data[child_index + 1].send(@type, @data[child_index]) 
+      if child_index + 1 < limit && @data[child_index + 1].send(@type, @data[child_index])
         child_index += 1
       end
       break unless value.send(@type == :< ? :> : :<, @data[child_index])
@@ -47,8 +47,8 @@ class BinaryHeap
   end
 
   private
-  
-    # O(n)
+
+    # T(n) = O(n)
     def build
       index = (@data.size - 2) / 2
       while index >= 0
