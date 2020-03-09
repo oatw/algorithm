@@ -17,7 +17,7 @@ RSpec.describe PriorityQueue do
   it 'min queue dequeue' do
     min_queue_dequeue_output = []
     enqueue_nums.each do |num|
-      min_queue_dequeue_output << min_queue.dequeue 
+      min_queue_dequeue_output << min_queue.dequeue
     end
     expect(min_queue_dequeue_output).to eq min_queue_dequeue_expected_output
   end
@@ -25,7 +25,7 @@ RSpec.describe PriorityQueue do
   it 'max queue dequeue' do
     max_queue_dequeue_output = []
     enqueue_nums.each do |num|
-      max_queue_dequeue_output << max_queue.dequeue 
+      max_queue_dequeue_output << max_queue.dequeue
     end
     expect(max_queue_dequeue_output).to eq max_queue_dequeue_expected_output
   end
