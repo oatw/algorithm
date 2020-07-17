@@ -20,11 +20,11 @@ $ git clone https://github.com/<your_github_username>/algorithm
 
 - [lib](https://github.com/oatw/algorithm/tree/master/lib): Implementations.
 
-- [spec](https://github.com/oatw/algorithm/tree/master/spec): Test specifications.
+- [test](https://github.com/oatw/algorithm/tree/master/test): Test cases.
 
 ## Test
 
-Repec is used for testing, you could run `bundle exec rspec` to test your implementations.
+Minitest is used for testing, you could run `rake test` to test your implementations.
 
 ## Contributing
 
