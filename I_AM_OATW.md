@@ -17,3 +17,14 @@ So I can't prove I'm oatw by providing the output of executing
 
 Fortunately, I can still push codes to my Github repos,
 so I created this branch to prove I'm oatw.
+
+# Appended
+
+Less than 20 hours after my request posted, I got an email from Github Support
+notifying me they had manually verified my devices.
+
+I regained access to my account and changed the primary email address.
+
+As a memorial, I decided to keep this branch here.
+
+**:hearts: Thank you, Github. :hearts: You saved my day! :hearts:**
