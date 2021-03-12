@@ -25,6 +25,6 @@ notifying me they had manually verified my devices.
 
 I regained access to my account and changed the primary email address.
 
-As a memorial, I decided to keep this branch here.
+As a memorial, I decide to keep this branch here.
 
 **:hearts: Thank you, Github. :hearts: You saved my day! :hearts:**
